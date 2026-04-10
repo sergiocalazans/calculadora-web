@@ -43,7 +43,9 @@ O projeto utiliza uma abordagem baseada em eventos para capturar as entradas do 
 
 ---
 
-## _Este projeto foi criado com o intuito de demonstrar habilidades em Front-end, focando na integração entre design moderno e funcionalidade lógica._
+## Objetivo
+
+Este projeto foi criado com o intuito de demonstrar habilidades em Front-end, focando na integração entre design moderno e funcionalidade lógica.
 
 ## Desenvolvimento
 
