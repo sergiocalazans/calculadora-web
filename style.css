@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-calculadora: black;
+  --cor-botao: rgb(121, 121, 121);
+  --cor-display: var(--cor-botao);
+  --cor-botao-igual: var(--cor-texto-operador);
+  --cor-botao-hover: rgb(141, 141, 141);
+  --cor-display-focus: var(--cor-botao-hover);
+  --cor-display-borda: white;
+  --cor-texto-calculadora: white;
+  --cor-destaque-botao: var(--cor-texto-calculadora);
+  --cor-texto-limpar: rgb(245, 38, 38);
+  --cor-texto-numero: orange;
+  --cor-texto-operador: rgb(48, 218, 48);
+  --cor-texto-igual: var(--cor-calculadora);
+  --cor-botao-igual-hover: rgb(72, 231, 72);
+  --cor-botao-limpar-tudo: var(--cor-texto-limpar);
+  --cor-botao-limpar-tudo-hover: rgb(255, 76, 76);
+  --cor-texto-limpar-tudo: var(--cor-texto-igual);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#calculadora {
+  color: var(--cor-texto-calculadora);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 450px;
+  height: 500px;
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--cor-calculadora);
+  border-radius: 20px;
+  gap: 10px;
+}
+
+#display {
+  height: 20%;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  font-size: 40px;
+  background-color: var(--cor-display);
+  color: var(--cor-texto-calculadora);
+  border-radius: 20px;
+  text-align: right;
+  border: none;
+  outline: none;
+}
+
+#display:focus {
+  border: 2px solid var(--cor-display-borda);
+}
+
+#display:focus,
+#display:hover {
+  background-color: var(--cor-display-focus);
+}
+
+.calculadora-corpo {
+  position: relative;
+  height: 80%;
+  width: 100%;
+}
+
+.calculadora-botoes {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(5, auto);
+  height: 100%;
+  gap: 5px;
+}
+
+.calculadora-botoes button {
+  font-weight: 700;
+  font-size: 24px;
+  border: 1.5px solid var(--cor-calculadora);
+  border-radius: 20px;
+}
+
+.calculadora-botoes button:hover {
+  border: 1.5px solid var(--cor-destaque-botao);
+}
+
+.numero,
+.operador,
+#limpar {
+  background-color: var(--cor-botao);
+}
+
+.numero:hover,
+.operador:hover,
+#limpar:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+#igual {
+  background-color: var(--cor-botao-igual);
+}
+
+#igual:hover {
+  background-color: var(--cor-botao-igual-hover);
+}
+
+#limpar {
+  color: var(--cor-texto-limpar);
+}
+
+#igual {
+  color: var(--cor-texto-igual);
+}
+
+.numero {
+  color: var(--cor-texto-numero);
+}
+
+.operador {
+  color: var(--cor-texto-operador);
+}
+
+#limpar-tudo {
+  background-color: var(--cor-botao-limpar-tudo);
+  color: var(--cor-texto-limpar-tudo);
+}
+
+#limpar-tudo:hover {
+  background-color: var(--cor-botao-limpar-tudo-hover);
+}
+
+#historico {
+  width: 100%;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--cor-texto-calculadora);
+  font-size: 18px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#historico-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#historico-lista {
+  flex: 1;
+  overflow-y: auto;
+  padding: 5px 10px;
+}
+
+#historico-lista div {
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 3px;
+}
+
+#limpar-historico {
+  display: flex;
+  justify-content: flex-end;
+  background: transparent;
+  border: none;
+  color: var(--cor-texto-limpar);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#limpar-historico:hover {
+  color: var(--cor-botao-limpar-tudo-hover);
+}
+
+.lixeira {
+  width: 8%;
+}
